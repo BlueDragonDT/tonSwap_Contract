@@ -10,7 +10,6 @@ const walletV3Code = Cell.fromBoc(
 export class Wallet implements iTvmBusContract {
     contract: SmartContract;
     address: Address;
-
     private constructor(contract: SmartContract, myAddress: Address, tvmBus: TvmBus, balance: BN) {
         this.contract = contract;
         this.address = myAddress;
@@ -22,7 +21,7 @@ export class Wallet implements iTvmBusContract {
     }
 
     async sendInternalMessage(message: InternalMessage) {
-        //@ts-ignore
+        //@ts-ignore.
         return this.contract.sendInternalMessage(message);
     }
 
